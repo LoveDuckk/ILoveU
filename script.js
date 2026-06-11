@@ -56,11 +56,11 @@
         <div class="music-info">
 
             <h2>
-                Céu Azul
+                Romântica
             </h2>
 
             <p>
-                Charlie Brown Jr.
+                Rio Negro & Solimões
             </p>
 
         </div>
