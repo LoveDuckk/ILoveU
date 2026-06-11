@@ -134,14 +134,14 @@
 
             <img
                 src="Imagem7.jpg"
-                alt="Lucas e Maria"
+                alt="Vinicius e Denise"
                 class="couple-image"
             >
 
             <div class="couple-info">
 
                 <h3>
-                    Lucas & Maria
+                    Vinicius & Denise
                 </h3>
 
                 <p>
@@ -149,7 +149,7 @@
                 </p>
 
                 <span>
-                    22/12/2024 às 20:00
+                    06/12/2025 às 20:00
                 </span>
 
             </div>
