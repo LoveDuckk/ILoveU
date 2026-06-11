@@ -1,266 +1,245 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+console.log("VERSAO 2026 TESTE");
+// ======================
+// CARROSSEL DE FOTOS
+// ======================
 
-    <title>Pra mulher da minha vida ❤️</title>
+const images = [
+    "Imagem2.jpg",
+    "Imagem3.jpg",
+    "Imagem4.jpg",
+    "Imagem5.jpg",
+    "Imagem6.jpg"
+    "Imagem7.jpg",
+    "Imagem8.jpg",
+    "Imagem9.jpg",
+    "Imagem10.jpg",
+    "Imagem11.jpg",
+    "Imagem12.jpg",
+    "Imagem13.jpg",
+    "Imagem14.jpg",
+    "Imagem15.jpg",
+    "Imagem16.jpg",
+    "Imagem17.jpg",
+    "Imagem18.jpg"
+];
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+let currentImage = 0;
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+const albumImage = document.getElementById("albumImage");
 
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+setInterval(() => {
 
-<body>
+    currentImage++;
 
-    <!-- PLAYER -->
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
 
-    <section class="player-section">
+    albumImage.style.opacity = 0;
 
-        <div class="top-bar">
+    setTimeout(() => {
 
-            <div class="icon-btn">
-                ▼
-            </div>
+        albumImage.src = images[currentImage];
 
-            <h1>
-                Pra mulher da minha vida
-            </h1>
+        albumImage.style.opacity = 1;
 
-            <div class="icon-btn">
-                ♥
-            </div>
+    }, 300);
 
-        </div>
+}, 4000);
 
-        <div class="album-container">
 
-            <img
-                id="albumImage"
-                src="Imagem1.jpg"
-                alt="Nossa foto"
-            >
+// ======================
+// MENSAGEM ESPECIAL
+// ======================
 
-        </div>
+const messageButton =
+document.getElementById("messageButton");
 
-        <div class="music-info">
+const messageContent =
+document.getElementById("messageContent");
 
-            <h2>
-                Romântica
-            </h2>
+messageButton.addEventListener("click", () => {
 
-            <p>
-                Rio Negro & Solimões
-            </p>
+    messageContent.classList.toggle("open");
 
-        </div>
+    if(messageContent.classList.contains("open")){
+        messageButton.textContent = "Esconder Mensagem";
+    }
+    else{
+        messageButton.textContent = "Mostrar Mensagem";
+    }
 
-        <div class="progress-wrapper">
+});
 
-            <div class="progress-bar">
 
-                <div
-                    class="progress-fill"
-                    id="progressFill"
-                ></div>
+// ======================
+// CONTADOR DO CASAL
+// ======================
 
-            </div>
+const relationshipDate =
+new Date("2024-12-22T20:00:00");
 
-            <div class="time-row">
+function updateCounter(){
 
-                <span id="currentTime">
-                    0:00
-                </span>
+    const now = new Date();
 
-                <span id="durationTime">
-                    0:00
-                </span>
+    let years =
+    now.getFullYear() -
+    relationshipDate.getFullYear();
 
-            </div>
+    let months =
+    now.getMonth() -
+    relationshipDate.getMonth();
 
-        </div>
+    let days =
+    now.getDate() -
+    relationshipDate.getDate();
 
-        <div class="controls">
+    if(days < 0){
 
-            <button class="control-btn">
-                <i data-lucide="shuffle"></i>
-            </button>
+        months--;
 
-            <button class="control-btn">
-                <i data-lucide="skip-back"></i>
-            </button>
+        const previousMonth =
+        new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            0
+        );
 
-            <button id="playButton" class="play-btn">
-                <i data-lucide="play"></i>
-            </button>
+        days += previousMonth.getDate();
+    }
 
-            <button class="control-btn">
-                <i data-lucide="skip-forward"></i>
-            </button>
+    if(months < 0){
+        years--;
+        months += 12;
+    }
 
-            <button class="control-btn">
-                <i data-lucide="repeat"></i>
-            </button>
+    const diff =
+    now - relationshipDate;
 
+    const hours =
+    Math.floor(
+        diff / (1000 * 60 * 60)
+    ) % 24;
 
+    document.getElementById("years")
+    .textContent = years;
 
-        </div>
+    document.getElementById("months")
+    .textContent = months;
 
-    </section>
+    document.getElementById("days")
+    .textContent = days;
 
-    <!-- FIM DO PLAYER -->
+    document.getElementById("hours")
+    .textContent = hours;
+}
 
+updateCounter();
 
+setInterval(updateCounter,1000);
 
-    <!-- SOBRE O CASAL -->
 
-    <main class="content">
+// ======================
+// PLAYER YOUTUBE
+// ======================
 
-        <section class="card">
+const audio =
+document.getElementById("audioPlayer");
 
-            <h2 class="section-title">
-                ❤️ Sobre o casal
-            </h2>
+let isPlaying = false;
 
-            <img
-                src="Imagem7.jpg"
-                alt="Vinicius e Denise"
-                class="couple-image"
-            >
+const playButton =
+document.getElementById("playButton");
 
-            <div class="couple-info">
+playButton.addEventListener(
+    "click",
+    toggleMusic
+);
 
-                <h3>
-                    Vinicius & Denise
-                </h3>
+function toggleMusic(){
 
-                <p>
-                    Juntos desde
-                </p>
+    if(isPlaying){
 
-                <span>
-                    06/12/2025 às 17:00
-                </span>
+        audio.pause();
 
-            </div>
+        playButton.innerHTML = `
+            <i data-lucide="play"></i>
+        `;
 
-            <div class="counter-grid">
+        isPlaying = false;
 
-                <div class="counter-card">
-                    <span id="years">
-                        0
-                    </span>
-                    <small>Anos</small>
-                </div>
+    }else{
 
-                <div class="counter-card">
-                    <span id="months">
-                        0
-                    </span>
-                    <small>Meses</small>
-                </div>
+        audio.play();
 
-                <div class="counter-card">
-                    <span id="days">
-                        0
-                    </span>
-                    <small>Dias</small>
-                </div>
+        playButton.innerHTML = `
+            <i data-lucide="pause"></i>
+        `;
 
-                <div class="counter-card">
-                    <span id="hours">
-                        0
-                    </span>
-                    <small>Horas</small>
-                </div>
+        isPlaying = true;
 
-            </div>
+    }
 
-        </section>
-
-
-
-        <!-- MENSAGEM -->
-
-        <section class="card special-message">
-
-            <h2 class="section-title">
-                💌 Mensagem Especial
-            </h2>
-
-            <button
-                id="messageButton"
-                class="message-button"
-            >
-                Mostrar Mensagem
-            </button>
-
-            <div
-                id="messageContent"
-                class="message-content"
-            >
-
-                <p>
-                    Feliz Dia dos Namorados, minha esposa e eterna namorada!
-                </p>
-
-                <p>
-                    É tão bom olhar para trás e ver tudo o que já construímos
-                    juntos. Um relacionamento que começou há alguns anos se
-                    tornou isso que somos hoje.
-                </p>
-
-                <p>
-                    Mas o mais bonito de tudo é perceber que, mesmo com a
-                    rotina, o cansaço e as responsabilidades, o brilho nos meus
-                    olhos quando você sorri continua o mesmo de quando tudo
-                    começou.
-                </p>
-
-                <p>
-                    Não há nada mais gratificante do que chegar em casa depois
-                    de um dia de trabalho e te ver me esperando, tão doce e
-                    carinhosa, que consegue me confortar de qualquer problema.
-                </p>
-
-                <p>
-                    Obrigado por ser minha parceira de vida, meu porto seguro e
-                    a pessoa que torna todos os meus dias melhores.
-                </p>
-
-                <p>
-                    Te amo!
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- PLAYER INVISÍVEL -->
-
-    <audio id="audioPlayer">
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-
-    <script src="script.js"></script>
-
-    <script>
     lucide.createIcons();
-    </script>
+}
 
-</body>
-</html>
+
+// ======================
+// BARRA DE PROGRESSO
+// ======================
+
+audio.addEventListener(
+    "timeupdate",
+    updateProgress
+);
+
+function updateProgress(){
+
+    const current =
+    audio.currentTime;
+
+    const duration =
+    audio.duration;
+
+    if(!duration) return;
+
+    const percent =
+    (current / duration) * 100;
+
+    document
+    .getElementById("progressFill")
+    .style.width =
+    percent + "%";
+
+    document
+    .getElementById("currentTime")
+    .textContent =
+    formatTime(current);
+
+}
+
+    function formatTime(time){
+
+    const minutes =
+    Math.floor(time / 60);
+
+    const seconds =
+    Math.floor(time % 60);
+
+    return `${minutes}:${seconds
+        .toString()
+        .padStart(2,"0")}`;
+
+}
+audio.addEventListener(
+    "loadedmetadata",
+    () => {
+
+        document
+        .getElementById("durationTime")
+        .textContent =
+        formatTime(audio.duration);
+
+    }
+);
