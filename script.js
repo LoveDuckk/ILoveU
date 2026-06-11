@@ -149,7 +149,7 @@
                 </p>
 
                 <span>
-                    06/12/2025 às 20:00
+                    06/12/2025 às 17:00
                 </span>
 
             </div>
@@ -211,58 +211,35 @@
             >
 
                 <p>
-                    Meu amor,
+                    Feliz Dia dos Namorados, minha esposa e eterna namorada!
                 </p>
 
                 <p>
-                    Eu queria que você soubesse o quanto eu te amo.
-                    Às vezes as palavras parecem pequenas para explicar tudo
-                    o que eu sinto por você, mas mesmo assim eu quero tentar.
+                    É tão bom olhar para trás e ver tudo o que já construímos
+                    juntos. Um relacionamento que começou há alguns anos se
+                    tornou isso que somos hoje.
                 </p>
 
                 <p>
-                    Apesar de todas as dificuldades, dos erros, das diferenças
-                    e dos momentos complicados que a vida possa colocar no nosso
-                    caminho, existe uma coisa que nunca vai mudar:
-                    o amor que eu sinto por você.
+                    Mas o mais bonito de tudo é perceber que, mesmo com a
+                    rotina, o cansaço e as responsabilidades, o brilho nos meus
+                    olhos quando você sorri continua o mesmo de quando tudo
+                    começou.
                 </p>
 
                 <p>
-                    Eu nunca vou deixar de te amar.
-                    Todos os dias eu escolho você, e vou continuar escolhendo
-                    enquanto eu viver.
+                    Não há nada mais gratificante do que chegar em casa depois
+                    de um dia de trabalho e te ver me esperando, tão doce e
+                    carinhosa, que consegue me confortar de qualquer problema.
                 </p>
 
                 <p>
-                    Você me faz querer ser uma pessoa melhor.
-                    Você me inspira a crescer, a corrigir meus defeitos e a
-                    lutar para me tornar alguém de quem você possa se orgulhar.
+                    Obrigado por ser minha parceira de vida, meu porto seguro e
+                    a pessoa que torna todos os meus dias melhores.
                 </p>
 
                 <p>
-                    Você trouxe felicidade para a minha vida de uma forma que
-                    eu nunca imaginei ser possível.
-                </p>
-
-                <p>
-                    Eu quero dedicar minha vida a construir algo bonito com você.
-                    Quero estar presente nos dias bons e nos dias difíceis.
-                    Quero construir nossa família, nosso lar e nossa história.
-                </p>
-
-                <p>
-                    Talvez eu não seja perfeito, mas eu prometo que nunca vou
-                    parar de tentar melhorar por nós.
-                </p>
-
-                <p>
-                    Eu te amo mais do que consigo explicar.
-                    Hoje, amanhã e por toda minha vida.
-                </p>
-
-                <p class="signature">
-                    ❤️ Com todo meu amor,<br>
-                    Lucas
+                    Te amo!
                 </p>
 
             </div>
