@@ -8,7 +8,7 @@ const images = [
     "Imagem3.jpg",
     "Imagem4.jpg",
     "Imagem5.jpg",
-    "Imagem6.jpg"
+    "Imagem6.jpg",
     "Imagem7.jpg",
     "Imagem8.jpg",
     "Imagem9.jpg",
@@ -77,7 +77,7 @@ messageButton.addEventListener("click", () => {
 // ======================
 
 const relationshipDate =
-new Date("2024-12-22T20:00:00");
+new Date("2025-12-06T17:00:00");
 
 function updateCounter(){
 
