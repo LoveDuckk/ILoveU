@@ -31,14 +31,6 @@ setInterval(() => {
 
     currentImage++;
 
-    if (currentImage >= images.length) {
-        currentImage = 0;
-    }
-
-    setInterval(() => {
-
-    currentImage++;
-
     if(currentImage >= images.length){
         currentImage = 0;
     }
@@ -54,8 +46,6 @@ setInterval(() => {
         };
 
     }, 1000);
-
-}, 4000);
 
 }, 4000);
 
